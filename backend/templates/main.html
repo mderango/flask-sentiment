@@ -1,0 +1,15 @@
+<doctype html>
+    <head>
+        <title>NASDAQ Sentiments</title>
+    </head>
+     
+    <h2>NASDAQ Sentiments</h2>
+     
+    {% from "_formhelpers.html" import render_field %}
+    <form method=post>
+      <dl>
+        <p>
+        {{ render_field(form.search) }}
+      </dl>
+      <p><input type=submit value=Search>
+    </form>
