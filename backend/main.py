@@ -18,7 +18,8 @@ def home():
 def page(stock):
     # PLANNED: Standard page for stock report   
     #          Include graph and blurb
-    return 'Auxiliary ' + stock + ' Page Placeholder'
+    stock_string = stock.data['search']
+    return 'Auxiliary ' + stock_string + ' Page Placeholder'
 
 if __name__ == "__main__":
     app.run(debug=True)
