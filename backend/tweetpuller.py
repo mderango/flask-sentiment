@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 import sqlite3
 import vaderSentiment as vs
-
+from utils import *
 
 class TweetPuller(object):
 
