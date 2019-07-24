@@ -11,7 +11,7 @@ def convert_creation_timestamp(t):
     Converts created_at field to seconds since 1/1/1970 utc:
     Tue Jul 23 10:11:02 +0000 2019
     '''
-    month = int(t[4:7])
+    month = month_map[t[4:7]]
     day = int(t[8:10])
     hour = int(t[11:13])
     minute = int(t[14:16])
