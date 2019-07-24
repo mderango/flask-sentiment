@@ -1,3 +1,4 @@
 .vscode
 backend/__pycache__
-backend/twitter/info.json
+backend/twitter/api-access.py
+backend/twitter/keys.json
