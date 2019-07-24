@@ -1,7 +1,14 @@
 from flask import Flask, flash, render_template, request, redirect
 from search import StockSearchForm
+import sqlite3
 
 app = Flask(__name__)
+
+### initialize database with table to store data if empty
+conn = sqlite3.connect('database/database.db')
+c = conn.cursor()
+c.execute('''CREATE TABLE stocks
+            (date text, symbol text, sentiment real, retweet_count real, favorite_count real''')
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
