@@ -5,7 +5,7 @@ import sqlite3
 import vaderSentiment as vs
 
 
-class TweetPuller:
+class TweetPuller(object):
 
     def __init__(self):
         credentials = json.loads('twitter/keys.json')
