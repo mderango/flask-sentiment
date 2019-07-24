@@ -20,7 +20,7 @@ class TweetPuller(object):
         self.analyzer = vs.vaderSentiment.SentimentIntensityAnalyzer()
     
     def pull_tweets(self, query):
-        today = str(datetime.now())[:10]
+        today = str(datetime.utcnow())[:10]
         tweets = self.api.GetSearch(term=query, lang='en', since=today,
                                     result_type='recent', return_json=True)
         tweets = tweets['statuses']
