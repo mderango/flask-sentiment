@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 import sqlite3
 import vaderSentiment as vs
-from utils import *
+from utils import convert_creation_timestamp, convert_integer_timestamp
 
 class TweetPuller(object):
 
@@ -27,7 +27,7 @@ class TweetPuller(object):
         # add to database
         for tweet in tweets:
             # needs to be preprocessed
-            date = tweet['created_at']
+            date = convert_creation_timestamp(tweet['created_at'])
             # pull text and analyze sentiment
             text = tweet['text']
             # polarity scores include pos, neu, neg, and compound
